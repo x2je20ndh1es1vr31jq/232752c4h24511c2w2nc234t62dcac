@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Salin Teks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #copyButton {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+    #copyButton:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <p id="textToCopy">̬̬̬̬ąᷨ꙰̈́ꞥ͍͍ͣ̂ḁᷝꝃͥ꙰̸᪵</p>
+  <button id="copyButton" onclick="copyText()">Salin Teks</button>
+
+  <script>
+    function copyText() {
+      const text = document.getElementById("textToCopy").innerText;
+
+      // Buat elemen textarea sementara untuk menyalin teks
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+
+      alert("Teks berhasil disalin: " + text);
+    }
+  </script>
+
+</body>
+</html>
