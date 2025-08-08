@@ -6,17 +6,30 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      padding: 20px;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #f9f9f9;
     }
+
+    #textToCopy {
+      font-size: 48px; /* Ukuran teks lebih besar */
+      margin-bottom: 20px;
+    }
+
     #copyButton {
-      padding: 10px 20px;
+      padding: 12px 24px;
       background-color: #007BFF;
       color: white;
       border: none;
       cursor: pointer;
-      font-size: 16px;
+      font-size: 18px;
       border-radius: 5px;
     }
+
     #copyButton:hover {
       background-color: #0056b3;
     }
@@ -24,14 +37,13 @@
 </head>
 <body>
 
-  <p id="textToCopy">𒁹ꞏᩳḁ᪵ⷡꞥ͍ⷽ᪼ąᷞꝃ᪵ͥꞏᩳ𒁹</p>
+  <p id="textToCopy">𒁹ꞏ̏ḁ᪵ⷡꞥ͍ⷽ᪼ąᷞꝃ᪵ͥꞏ̋𒁹</p>
   <button id="copyButton" onclick="copyText()">Salin Teks</button>
 
   <script>
     function copyText() {
       const text = document.getElementById("textToCopy").innerText;
 
-      // Buat elemen textarea sementara untuk menyalin teks
       const textarea = document.createElement("textarea");
       textarea.value = text;
       document.body.appendChild(textarea);
