@@ -4,10 +4,17 @@
 <meta charset="utf-8">
 <title>Dewanti</title>
 <script>
-window.location.href = "./dl/mex-name.lua";
+window.onload = function() {
+  var link = document.createElement('a');
+  link.href = './dl/mex-name.lua';
+  link.download = 'mex-name.lua';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 </script>
 </head>
 <body>
-Redirecting...
+Hi.
 </body>
 </html>
